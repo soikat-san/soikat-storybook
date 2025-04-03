@@ -1,11 +1,5 @@
 .nav-wrapper {
-  top: 60px;
-  width: 285px;
-  overflow: hidden;
-  overflow-y: auto;
   padding: 10px 20px;
-  position: relative;
-  height: calc(100vh - 60px);
   border-right: 0.1px solid #64748b;
 }
 
@@ -33,31 +27,37 @@
     border: 0.1px solid #64748b;
   }
   > .group {
-    font-size: 12px;
+    font-size: 10px;
     padding-left: 12px;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
   }
 }
 
-.item-stack {
-  margin-left: 4px;
+.item-stack > p {
+  color: #000;
   cursor: pointer;
+  margin-left: 4px;
   padding: 10px 0 10px 20px;
   border-left: 0.1px solid #64748b;
   &:hover {
-    background-color: #d1d5db;
     border-radius: 0 5px 5px 0;
+    background-color: #d1d5db;
     border-left: 2px solid #1d4ed8;
   }
 }
 
-html.dark .item-stack,
+html.dark .nav-wrapper > p {
+  color: #f8fafc;
+}
+
+html.dark .item-stack > p,
 html.dark .root-stack {
+  color: #f8fafc;
   &:hover {
     color: #000;
     background-color: #d1d5db;
     border-radius: 0 5px 5px 0;
-    border-left: 2px solid #f43f5e;
+    border-left: 2px solid #06b6d4;
   }
 }
 
@@ -66,4 +66,27 @@ html.dark .group-stack {
     background-color: #ecfeff;
     border: 0.1px solid #f8fafc;
   }
+  > .group {
+    color: #f8fafc;
+  }
+}
+
+.item-stack-active > p {
+  color: #000;
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 10px 0 10px 20px;
+  border-radius: 0 5px 5px 0;
+  background-color: #bfdbfe;
+  border-left: 2px solid #1d4ed8;
+}
+
+html.dark .item-stack-active > p {
+  color: #000;
+  cursor: pointer;
+  margin-left: 4px;
+  padding: 10px 0 10px 20px;
+  border-radius: 0 5px 5px 0;
+  background-color: #a5f3fc;
+  border-left: 2px solid #06b6d4;
 }

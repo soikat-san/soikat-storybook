@@ -7,6 +7,7 @@ interface EnhancedGridProps extends GridProps {
   style?: React.CSSProperties;
 }
 
+// [TODO: fix spacing implementation]
 const Grid: React.FC<EnhancedGridProps> = ({
   children,
   container = false,
@@ -29,49 +30,34 @@ const Grid: React.FC<EnhancedGridProps> = ({
     return classList.join(" ").trim();
   }, [container, item, className]);
 
+  // Convert spacing into pixels (using 8px as a base unit)
+  const gap = typeof spacing === "number" ? spacing * 8 : 0;
+
+  // Calculate width so that it accounts for gaps in the row.
+  // For a given span, number of items per row = 12 / span.
+  // Total gap in a row = (items per row - 1) * gap.
+  // Then each item's width = ((100% - total gap) * (span / 12))
+  const calcWidth = (span: number | undefined) => {
+    if (!span) return "100%";
+    const itemsPerRow = 12 / span;
+    return `calc((100% - ${itemsPerRow - 1} * ${gap}px) * (${span} / 12))`;
+  };
+
   const styles: React.CSSProperties = useMemo(
     () => ({
       ...(container && {
         display: "flex",
         flexDirection: direction,
         flexWrap: wrap,
-        "--grid-spacing":
-          typeof spacing === "number" ? `${spacing * 8}px` : spacing,
+        gap: `${gap}px`,
+        "--grid-spacing": `${gap}px`,
       }),
       ...(item && {
-        "--grid-columns-xs": xs ? (100 * xs) / 12 + "%" : "100%",
-        "--grid-columns-sm": sm
-          ? (100 * sm) / 12 + "%"
-          : xs
-          ? (100 * xs) / 12 + "%"
-          : "100%",
-        "--grid-columns-md": md
-          ? (100 * md) / 12 + "%"
-          : sm
-          ? (100 * sm) / 12 + "%"
-          : xs
-          ? (100 * xs) / 12 + "%"
-          : "100%",
-        "--grid-columns-lg": lg
-          ? (100 * lg) / 12 + "%"
-          : md
-          ? (100 * md) / 12 + "%"
-          : sm
-          ? (100 * sm) / 12 + "%"
-          : xs
-          ? (100 * xs) / 12 + "%"
-          : "100%",
-        "--grid-columns-xl": xl
-          ? (100 * xl) / 12 + "%"
-          : lg
-          ? (100 * lg) / 12 + "%"
-          : md
-          ? (100 * md) / 12 + "%"
-          : sm
-          ? (100 * sm) / 12 + "%"
-          : xs
-          ? (100 * xs) / 12 + "%"
-          : "100%",
+        "--grid-columns-xs": calcWidth(xs),
+        "--grid-columns-sm": calcWidth(sm ?? xs),
+        "--grid-columns-md": calcWidth(md ?? sm ?? xs),
+        "--grid-columns-lg": calcWidth(lg ?? md ?? sm ?? xs),
+        "--grid-columns-xl": calcWidth(xl ?? lg ?? md ?? sm ?? xs),
       }),
       ...externalStyles,
     }),
@@ -87,6 +73,7 @@ const Grid: React.FC<EnhancedGridProps> = ({
       lg,
       xl,
       externalStyles,
+      gap,
     ]
   );
 

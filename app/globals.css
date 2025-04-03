@@ -31,6 +31,11 @@ html.light .layout {
   background-color: #e2e8f0;
 }
 
+.container {
+  margin-top: 60px !important;
+  height: calc(100vh - 60px);
+}
+
 .appbar {
   top: 0;
   left: 0;
@@ -49,9 +54,21 @@ html.light .layout {
 }
 
 .sidebar {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
 }
 
 .content-wrapper {
-  position: relative;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+}
+
+html.dark .appbar {
+  > p {
+    color: #f8fafc;
+  }
 }

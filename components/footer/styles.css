@@ -1,0 +1,32 @@
+.footer-container {
+  margin-bottom: 25px;
+  padding: 25px 0;
+  border-top: 0.1px solid #64748b;
+  border-bottom: 0.1px solid #64748b;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > a > p {
+      color: #1d4ed8;
+      font-size: 15px;
+      font-weight: 600;
+      > .prev {
+        top: 6px;
+        font-size: 1.5rem;
+        position: relative;
+      }
+      > .next {
+        top: 7px;
+        font-size: 1.5rem;
+        position: relative;
+      }
+    }
+  }
+}
+
+html.dark .footer-container {
+  > div > a > p {
+    color: #06b6d4;
+  }
+}

@@ -3,15 +3,11 @@
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
-  margin-left: calc(-1 * var(--grid-spacing, 0px));
-  margin-top: calc(-1 * var(--grid-spacing, 0px));
+  gap: var(--grid-spacing, 0px);
 }
 
 .grid-item {
-  flex-grow: 0;
   box-sizing: border-box;
-  padding-left: var(--grid-spacing, 0px);
-  padding-top: var(--grid-spacing, 0px);
 }
 
 /* XS breakpoint (0px and up) */

@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ysebeauFont } from "./font";
 import Grid from "@/components/ui/Grid/component";
+import Typography from "@/components/ui/Typography/component";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { StackNavigator } from "@/components/stack/stack-navigator";
@@ -25,10 +26,12 @@ export default function RootLayout({
           defaultTheme="system"
           disableTransitionOnChange
         >
-          <Grid container>
+          <Grid container className="container">
             <Grid item xs={12}>
               <div className="appbar">
-                <p className={ysebeauFont.className}>Soikat UI</p>
+                <Typography className={ysebeauFont.className}>
+                  Soikat UI
+                </Typography>
                 <ThemeToggle />
               </div>
             </Grid>
