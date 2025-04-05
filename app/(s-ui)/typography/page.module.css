@@ -1,0 +1,35 @@
+.typoContainer {
+  margin: 25px 0;
+}
+
+.title {
+  font-weight: 800;
+}
+
+:global(html.dark) .title {
+  color: #f8fafc;
+}
+
+.description {
+  padding: 5px 0;
+  font-weight: 500;
+  > a {
+    color: #1d4ed8;
+  }
+}
+
+:global(html.dark) .description {
+  color: #b6bec9;
+  > a {
+    color: #06b6d4;
+  }
+}
+
+.subTitle {
+  font-weight: 700;
+  padding: 30px 0 10px 0;
+}
+
+:global(html.dark) .subTitle {
+  color: #f8fafc;
+}

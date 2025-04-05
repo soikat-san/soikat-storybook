@@ -23,7 +23,7 @@ export default function CustomSpacing() {
         </Grid>
       </Grid>
       <div className={styles.spacingVals}>
-        <Typography variant="h6">spacing</Typography>
+        <Typography variant="body2">spacing</Typography>
         <Grid container>
           {spacingArray.map((val, id) => (
             <Fragment key={id}>
@@ -37,7 +37,7 @@ export default function CustomSpacing() {
                   ) : (
                     <IoMdRadioButtonOn onClick={() => setSpacing(val)} />
                   )}
-                  <Typography variant="h4">{val}</Typography>
+                  <Typography variant="subtitle1">{val}</Typography>
                 </div>
               </Grid>
             </Fragment>

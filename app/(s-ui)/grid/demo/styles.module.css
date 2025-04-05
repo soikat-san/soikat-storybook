@@ -3,7 +3,6 @@
 }
 
 .title {
-  font-size: 40px;
   font-weight: 800;
 }
 
@@ -13,7 +12,7 @@
 
 .description {
   padding: 5px 0;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: 500;
 }
 
@@ -37,7 +36,7 @@
 }
 
 .content {
-  font-size: 16px;
+  /* font-size: 16px; */
   > a {
     color: #1d4ed8;
   }

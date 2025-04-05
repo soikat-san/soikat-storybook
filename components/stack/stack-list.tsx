@@ -43,7 +43,7 @@ export const stackList = [
         itemName: "Tooltip",
       },
       {
-        href: "#",
+        href: "/typography",
         type: "item",
         itemName: "Typography",
       },

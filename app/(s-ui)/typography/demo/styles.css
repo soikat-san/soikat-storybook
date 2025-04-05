@@ -1,0 +1,128 @@
+.typeContainer {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #cbd5e1;
+  border: 0.1px solid #64748b;
+  > .root-grid {
+    > .title1 {
+      padding: 10px;
+      border-right: 0.1px solid #64748b;
+      border-bottom: 0.1px solid #64748b;
+      > p {
+        letter-spacing: 1.5px;
+      }
+    }
+    > .title2 {
+      padding: 10px;
+      border-bottom: 0.1px solid #64748b;
+    }
+    > .fontdemo {
+      padding: 10px;
+    }
+  }
+}
+
+html.dark .typeContainer {
+  background-color: #1d212166;
+  > .root-grid {
+    > .title1 > p,
+    .title2 > p {
+      color: #f8fafc;
+    }
+  }
+}
+
+.typedemo {
+  padding: 10px;
+  border-right: 0.1px solid #64748b;
+}
+
+.types {
+  cursor: pointer;
+  &:hover {
+    background-color: #d4d4d4;
+    border-top: 0.1px solid #64748b;
+    border-bottom: 0.1px solid #64748b;
+  }
+  > p {
+    padding: 10px 0;
+  }
+}
+
+html.dark .types > p {
+  color: #b6bec9;
+  &:hover {
+    color: #000;
+  }
+}
+
+.type-active {
+  cursor: pointer;
+  background-color: #d4d4d4;
+}
+
+.directives {
+  display: flex;
+  padding: 0 12px;
+  align-items: center;
+  justify-content: space-between;
+  > section > .rule {
+    color: #4b5563;
+  }
+  > section > .vals {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+}
+
+.active-directive {
+  display: flex;
+  padding: 0 12px;
+  align-items: center;
+  justify-content: space-between;
+  > section > .rule {
+    color: #4b5563;
+  }
+  > section > .vals {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+}
+
+.fontdemo {
+  overflow: auto;
+  max-height: 800px;
+  > .font {
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px 0;
+    &:hover {
+      background-color: #d4d4d4;
+      border-top: 0.1px solid #64748b;
+      border-bottom: 0.1px solid #64748b;
+    }
+  }
+  > .activefont {
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px 0;
+    background-color: #d4d4d4;
+    border-top: 0.1px solid #64748b;
+    border-bottom: 0.1px solid #64748b;
+  }
+}
+
+html.dark .fontdemo > .font {
+  color: #b6bec9;
+  &:hover {
+    color: #000;
+  }
+}
+
+pre {
+  margin-top: 10 !important;
+  padding: 1rem !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  border-radius: 10px !important;
+}

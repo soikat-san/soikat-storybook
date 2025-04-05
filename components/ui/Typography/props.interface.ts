@@ -34,7 +34,7 @@ export type TypographyVariant =
   | "subtitle2"
   | string;
 
-export interface TypographyProps {
+export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   /** Sets the text-align on the component */
   align?: TypographyAlign;
   /** The content of the component */
@@ -51,4 +51,6 @@ export interface TypographyProps {
   noWrap?: boolean;
   /** Applies the theme typography styles */
   variant?: TypographyVariant;
+  /** External typography styles */
+  style?: React.CSSProperties;
 }

@@ -1,7 +1,6 @@
 "use client";
 import {
   oneDark,
-  oneLight,
   darcula,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Prism as SyntaxHighlight } from "react-syntax-highlighter";

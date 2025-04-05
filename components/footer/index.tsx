@@ -47,13 +47,13 @@ export function DynamicFooter() {
     <footer className="footer-container">
       <div className={montserratFont.className}>
         <Link href={prevItem?.href ? prevItem?.href : "#"}>
-          <Typography>
+          <Typography variant="body2">
             <MdChevronLeft className="prev" />
             {prevItem?.itemName}
           </Typography>
         </Link>
         <Link href={nextItem?.href ? nextItem?.href : "#"}>
-          <Typography>
+          <Typography variant="body2">
             {nextItem?.itemName}
             <MdChevronRight className="next" />
           </Typography>
