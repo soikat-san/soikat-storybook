@@ -13,7 +13,7 @@ export const stackList = [
         itemName: "Avatar",
       },
       {
-        href: "#",
+        href: "/badge",
         type: "item",
         itemName: "Badge",
       },

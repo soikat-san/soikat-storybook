@@ -1,0 +1,92 @@
+/* Root container: ensure relative positioning for the badge to position absolutely */
+.badge-root {
+  position: relative;
+  display: inline-block;
+}
+
+/* Badge element: basic styling */
+.badge-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  background-color: #f50057; /* Fallback color if none provided */
+  border-radius: 10px;
+  z-index: 1;
+  transform-origin: 100% 0%;
+}
+
+/* Anchor positioning */
+.badge-anchor-top-right {
+  top: 0;
+  right: 0;
+  transform: scale(1) translate(50%, -50%);
+}
+
+.badge-anchor-top-left {
+  top: 0;
+  left: 0;
+  transform: scale(1) translate(-50%, -50%);
+}
+
+.badge-anchor-bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scale(1) translate(50%, 25%);
+}
+
+.badge-anchor-bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scale(1) translate(-50%, 25%);
+}
+
+/* Overlap styles */
+.badge-overlap-circular .badge-badge {
+  border-radius: 50%;
+}
+
+/* Dot variant: a small circular indicator */
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* Color variations */
+.badge-default {
+  background-color: #bdbdbd;
+}
+
+.badge-primary {
+  background-color: #1976d2;
+}
+
+.badge-secondary {
+  background-color: #9c27b0;
+}
+
+.badge-error {
+  background-color: #d32f2f;
+}
+
+.badge-info {
+  background-color: #0288d1;
+}
+
+.badge-success {
+  background-color: #388e3c;
+}
+
+.badge-warning {
+  background-color: #f57c00;
+}

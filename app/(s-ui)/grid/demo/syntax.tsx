@@ -3,22 +3,18 @@ import {
   oneDark,
   darcula,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Prism as SyntaxHighlight } from "react-syntax-highlighter";
+import { FC } from "react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import HydrationWrapper from "@/app/hydration-wrapper";
+import { Prism as SyntaxHighlight } from "react-syntax-highlighter";
 
-export default function DynamicSyntax({ type }: { type: string }) {
+interface CodeSnippetsProps {
+  type: string;
+}
+
+const CodeSnippets: FC<CodeSnippetsProps> = ({ type }) => {
   const { theme } = useTheme();
   const syntaxTheme = theme === "light" ? oneDark : darcula;
-
-  const [mounted, setMounted] = useState(false);
-
-  // Fix hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null; // Avoid rendering during SSR
 
   if (type === "basic") {
     return (
@@ -65,4 +61,14 @@ export default function DynamicSyntax({ type }: { type: string }) {
       </SyntaxHighlight>
     );
   }
+
+  return null;
+};
+
+export default function DynamicSyntax({ type }: { type: string }) {
+  return (
+    <HydrationWrapper>
+      <CodeSnippets type={type} />
+    </HydrationWrapper>
+  );
 }

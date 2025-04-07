@@ -1,29 +1,21 @@
 "use client";
-import "./styles.css";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import {
   oneDark,
   darcula,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
+import "./styles.css";
+import { useTheme } from "next-themes";
+import HydrationWrapper from "@/app/hydration-wrapper";
 import { Prism as SyntaxHighlight } from "react-syntax-highlighter";
 
 export default function TypoSyntax() {
   const { theme } = useTheme();
   const syntaxTheme = theme === "light" ? oneDark : darcula;
 
-  const [mounted, setMounted] = useState(false);
-
-  // Fix hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null; // Avoid rendering during SSR
-
   return (
-    <SyntaxHighlight language={"javascript"} style={syntaxTheme}>
-      {`
+    <HydrationWrapper>
+      <SyntaxHighlight language={"javascript"} style={syntaxTheme}>
+        {`
 <Typography variant={'h1'}>Heading h1</Typography>
 <Typography variant={'h2'}>Heading h2</Typography>
 <Typography variant={'h3'}>Heading h3</Typography>
@@ -38,6 +30,7 @@ export default function TypoSyntax() {
 <Typography variant={'caption'}>Caption</Typography>
 <Typography variant={'overline'}>Overline</Typography>
       `.trim()}
-    </SyntaxHighlight>
+      </SyntaxHighlight>
+    </HydrationWrapper>
   );
 }
