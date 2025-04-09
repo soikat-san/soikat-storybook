@@ -1,0 +1,103 @@
+.avatarContainer {
+  margin: 25px 0;
+}
+
+.title {
+  font-weight: 800;
+}
+
+:global(html.dark) .title {
+  color: #f8fafc;
+}
+
+.description {
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+:global(html.dark) .description {
+  color: #b6bec9;
+}
+
+.subTitle {
+  font-weight: 700;
+  padding: 30px 0 10px 0;
+}
+
+:global(html.dark) .subTitle {
+  color: #f8fafc;
+}
+
+.demoContainer {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 0.1px solid #64748b;
+}
+
+.hasAvatar {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cbd5e1;
+  border-radius: 10px 10px 0 0;
+  > div {
+    margin: 0 10px;
+  }
+}
+
+:global(html.dark) .hasAvatar {
+  background-color: #d6d3d1;
+}
+
+.code pre {
+  margin: 0 !important;
+  padding: 1rem !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  border-radius: 0 0 10px 10px !important;
+}
+
+.coloravatar1 {
+  background-color: yellowgreen !important;
+}
+
+.coloravatar2 {
+  background-color: orangered !important;
+}
+
+.coloravatar3 {
+  background-color: violet !important;
+}
+
+.sizeavatar1 {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.sizeavatar2 {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+/* styles.module.css */
+.customSurplus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #bdbdbd;
+  color: #fff;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-left: -5px;
+}
+
+.badgeAvatar > span {
+  font-size: 10px !important;
+  width: 24px !important;
+  height: 24px !important;
+  background-color: crimson !important;
+}

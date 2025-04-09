@@ -1,14 +1,21 @@
 export const stackList = [
   {
-    type: "root",
-    rootName: "All Components",
+    type: "group",
+    rootName: "Components",
+    items: [
+      {
+        href: "/",
+        type: "item",
+        itemName: "All Components",
+      },
+    ],
   },
   {
     type: "group",
     groupName: "Data Display",
     items: [
       {
-        href: "#",
+        href: "/avatar",
         type: "item",
         itemName: "Avatar",
       },

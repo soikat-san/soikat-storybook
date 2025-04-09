@@ -27,7 +27,6 @@ function flattenStackList() {
       });
     }
   });
-
   return flat;
 }
 

@@ -1,0 +1,59 @@
+/* Avatar Component Styles */
+.avatar-root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  background-color: #bdbdbd;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Variants */
+.avatar-circular {
+  border-radius: 50%;
+}
+
+.avatar-rounded {
+  border-radius: 8px;
+}
+
+.avatar-square {
+  border-radius: 0;
+}
+
+/* Image styling */
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* AvatarGroup Component Styles */
+.avatar-group-root {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-group-item {
+  position: relative;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Surplus (extra avatars) styling */
+.avatar-group-surplus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #bdbdbd;
+  color: #fff;
+  font-size: 0.875rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
