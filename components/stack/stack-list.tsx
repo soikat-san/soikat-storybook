@@ -25,7 +25,7 @@ export const stackList = [
         itemName: "Badge",
       },
       {
-        href: "#",
+        href: "/chip",
         type: "item",
         itemName: "Chip",
       },

@@ -1,0 +1,118 @@
+/* Base chip styles */
+.chip-root {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 0 12px;
+  font-size: 0.875rem;
+  height: 32px;
+  background-color: #e0e0e0; /* default background */
+  color: rgba(0, 0, 0, 0.87);
+  outline: none;
+}
+
+/* Clickable chip */
+.chip-clickable {
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.2s;
+}
+
+.chip-clickable:active {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Disabled chip */
+.chip-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Filled variant – additional styling for filled chips */
+.chip-filled {
+  /* For example, add a slight shadow to filled chips */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Outlined variant styling */
+.chip-outlined {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+/* Color variations (example) */
+.chip-default {
+  background-color: #e0e0e0;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.chip-primary {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.chip-secondary {
+  background-color: #9c27b0;
+  color: #fff;
+}
+
+.chip-error {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.chip-info {
+  background-color: #0288d1;
+  color: #fff;
+}
+
+.chip-success {
+  background-color: #388e3c;
+  color: #fff;
+}
+
+.chip-warning {
+  background-color: #f57c00;
+  color: #fff;
+}
+
+/* Size variations */
+.chip-medium {
+  height: 32px;
+  font-size: 0.875rem;
+  padding: 0 12px;
+}
+
+.chip-small {
+  height: 24px;
+  font-size: 0.75rem;
+  padding: 0 8px;
+}
+
+/* Child elements */
+.chip-avatar {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.chip-icon {
+  display: inline-flex;
+  margin-right: 4px;
+}
+
+.chip-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip-delete-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.chip-delete-icon-svg {
+  vertical-align: middle;
+}
