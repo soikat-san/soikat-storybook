@@ -260,7 +260,7 @@ export const stackList = [
         itemName: "Card",
       },
       {
-        href: "#",
+        href: "/paper",
         type: "item",
         itemName: "Paper",
       },

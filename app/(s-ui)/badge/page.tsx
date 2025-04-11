@@ -1,12 +1,12 @@
 import styles from "./page.module.css";
 import DynamicSyntax from "./demo/syntax";
 import { montserratFont } from "@/app/font";
-import { IoMailSharp } from "react-icons/io5";
+import AlignmentDemo from "./demo/alignment";
 import InvisibleDemo from "./demo/invisible";
+import { IoMailSharp } from "react-icons/io5";
 import Badge from "@/components/ui/Badge/component";
 import { RiShoppingCart2Fill } from "react-icons/ri";
 import Typography from "@/components/ui/Typography/component";
-import AlignmentDemo from "./demo/alignment";
 
 const customizedBadge = {
   badge: styles.isCustomized,
