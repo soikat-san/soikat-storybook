@@ -1,0 +1,106 @@
+.btnContainer {
+  margin: 25px 0;
+}
+
+.title {
+  font-weight: 800;
+}
+
+:global(html.dark) .title {
+  color: #f8fafc;
+}
+
+.description {
+  padding: 5px 0;
+  font-weight: 500;
+  > a {
+    color: #1d4ed8;
+  }
+}
+
+:global(html.dark) .description {
+  color: #b6bec9;
+  > a {
+    color: #06b6d4;
+  }
+}
+
+.subTitle {
+  font-weight: 700;
+  padding: 30px 0 10px 0;
+}
+
+:global(html.dark) .subTitle {
+  color: #f8fafc;
+}
+
+.dot {
+  top: 3px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.content {
+  > a {
+    color: #1d4ed8;
+  }
+}
+
+:global(html.dark) .content {
+  font-size: 16px;
+  > a {
+    color: #06b6d4;
+  }
+}
+
+:global(html.dark) .content {
+  color: #b6bec9;
+}
+
+.demoContainer {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 0.1px solid #64748b;
+}
+
+.hasBtn {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #cbd5e1;
+  border-radius: 10px 10px 0 0;
+  > div > svg {
+    font-size: 30px;
+    color: #171717;
+  }
+}
+
+:global(html.dark) .hasBtn {
+  background-color: #d6d3d1;
+}
+
+.code pre {
+  margin: 0 !important;
+  padding: 1rem !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  border-radius: 0 0 10px 10px !important;
+}
+
+.subSubTitle {
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+:global(html.dark) .subSubTitle {
+  color: #f8fafc;
+}
+
+.hiddeninput {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

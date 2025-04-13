@@ -1,0 +1,132 @@
+/* Base button styles */
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font: inherit;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover style */
+.custom-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Variants */
+.variant-text {
+  background-color: transparent;
+  border: none;
+}
+
+.variant-outlined {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+.variant-contained {
+  color: #fff; /* default text color for contained */
+  border: none;
+}
+
+/* Colors (example palette) */
+.color-primary {
+  color: #1976d2;
+}
+.variant-contained.color-primary {
+  color: #dbeafe;
+  background-color: #1976d2;
+}
+
+.color-secondary {
+  color: #9c27b0;
+}
+.variant-contained.color-secondary {
+  color: #fae8ff;
+  background-color: #9c27b0;
+}
+
+.color-success {
+  color: #2e7d32;
+}
+.variant-contained.color-success {
+  color: #ccfbf1;
+  background-color: #16a34a;
+}
+
+.color-error {
+  color: #d32f2f;
+}
+.variant-contained.color-error {
+  color: #ffe4e6;
+  background-color: #d32f2f;
+}
+
+.color-info {
+  color: #0288d1;
+}
+.variant-contained.color-info {
+  color: #fef08a;
+  background-color: #eab308;
+}
+
+.color-warning {
+  color: #ed6c02;
+}
+.variant-contained.color-warning {
+  color: #ffedd5;
+  background-color: #ed6c02;
+}
+
+.color-inherit {
+  color: inherit;
+}
+
+/* Sizes */
+.size-small {
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+.size-medium {
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+.size-large {
+  padding: 12px 24px;
+  font-size: 1.125rem;
+}
+
+/* Full width */
+.full-width {
+  width: 100%;
+}
+
+/* Remove elevation */
+.no-elevation {
+  box-shadow: none !important;
+}
+
+/* Icon placement */
+.icon-start {
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.icon-end {
+  display: inline-flex;
+  margin-left: 8px;
+}
