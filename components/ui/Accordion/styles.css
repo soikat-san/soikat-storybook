@@ -1,0 +1,80 @@
+/* Accordion container */
+.accordion {
+  display: block; /* Ensures each Accordion is a block-level element */
+  width: 100%; /* Spans entire width */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Removes margin between items if disableGutters is true */
+.disable-gutters {
+  margin: 0;
+}
+
+/* Removes rounded corners if square is true */
+.square {
+  border-radius: 0;
+}
+
+/* Accordion summary styles */
+.accordion-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  user-select: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-summary:focus-visible {
+  outline: 2px solid blue;
+}
+
+.accordion-summary-content {
+  flex-grow: 1;
+}
+
+/* Expand icon wrapper styles */
+.accordion-summary-expand-icon {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* Accordion details with transition */
+.accordion-details {
+  padding: 16px;
+  border-top: 1px solid #ccc;
+  transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+}
+
+/* Hidden details */
+.accordion-details.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Visible details */
+.accordion-details.expanded {
+  max-height: 500px; /* Set an appropriate max-height for your transition. */
+  opacity: 1;
+}
+
+/* Accordion actions */
+.accordion-actions {
+  padding: 8px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #ccc;
+}
+
+/* Remove extra spacing if disableSpacing is true */
+.accordion-actions.disable-spacing {
+  padding: 0;
+}

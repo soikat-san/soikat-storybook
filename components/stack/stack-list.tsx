@@ -245,7 +245,7 @@ export const stackList = [
     groupName: "Surfaces",
     items: [
       {
-        href: "#",
+        href: "/accordion",
         type: "item",
         itemName: "Accordion",
       },
@@ -254,11 +254,11 @@ export const stackList = [
         type: "item",
         itemName: "App Bar",
       },
-      {
-        href: "#",
-        type: "item",
-        itemName: "Card",
-      },
+      // {
+      //   href: "/card", not to do
+      //   type: "item",
+      //   itemName: "Card",
+      // },
       {
         href: "/paper",
         type: "item",
