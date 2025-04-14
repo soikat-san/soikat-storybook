@@ -1,0 +1,97 @@
+/* Base container */
+.linear-progress {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Common bar styling */
+.linear-bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Primary progress bar */
+.linear-bar-primary {
+  background-color: currentColor;
+  z-index: 3;
+}
+
+/* Buffered area */
+.linear-bar-buffer {
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dotted area for remaining progress (only used in buffer variant) */
+.linear-bar-dotted {
+  z-index: 2;
+  /* Set the dotted pattern via a repeating linear gradient */
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent,
+    transparent 4px,
+    rgba(0, 0, 0, 0.2) 4px,
+    rgba(0, 0, 0, 0.2) 10px
+  );
+}
+
+/* Indeterminate / Query animations (if needed) */
+.linear-indeterminate1 {
+  position: absolute;
+  height: 100%;
+  background-color: currentColor;
+  animation: linear-indeterminate1 2s infinite;
+}
+
+.linear-indeterminate2 {
+  position: absolute;
+  height: 100%;
+  background-color: currentColor;
+  animation: linear-indeterminate2 2s infinite;
+}
+
+@keyframes linear-indeterminate1 {
+  0% {
+    left: -40%;
+    width: 40%;
+  }
+  50% {
+    left: 20%;
+    width: 60%;
+  }
+  100% {
+    left: 100%;
+    width: 40%;
+  }
+}
+
+@keyframes linear-indeterminate2 {
+  0% {
+    left: -100%;
+    width: 100%;
+  }
+  50% {
+    left: 50%;
+    width: 50%;
+  }
+  100% {
+    left: 100%;
+    width: 100%;
+  }
+}
+
+/* Color classes for demonstration */
+.color-primary {
+  color: #1976d2;
+}
+.color-secondary {
+  color: #9c27b0;
+}
+.color-inherit {
+  color: inherit;
+}

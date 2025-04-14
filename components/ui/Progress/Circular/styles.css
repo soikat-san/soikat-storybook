@@ -1,0 +1,65 @@
+/* Container */
+.circular-progress {
+  display: inline-block;
+  position: relative;
+}
+
+/* SVG styling */
+.circular-svg {
+  transform-origin: center;
+}
+
+/* Background circle */
+.circular-background {
+  stroke: rgba(0, 0, 0, 0.1);
+}
+
+/* Indicator circle */
+.circular-indicator {
+  stroke: currentColor;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+/* Indeterminate animation */
+.variant-indeterminate .circular-indicator {
+  animation: circular-rotate 1.4s linear infinite;
+}
+
+@keyframes circular-rotate {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -15px;
+  }
+  100% {
+    stroke-dasharray: 100, 200;
+    stroke-dashoffset: -125px;
+  }
+}
+
+/* Color classes */
+.color-primary {
+  color: #1976d2;
+}
+.color-secondary {
+  color: #9c27b0;
+}
+.color-error {
+  color: #d32f2f;
+}
+.color-info {
+  color: #eab308;
+}
+.color-success {
+  color: #16a34a;
+}
+.color-warning {
+  color: #ed6c02;
+}
+.color-inherit {
+  color: inherit;
+}

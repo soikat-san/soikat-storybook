@@ -76,7 +76,7 @@ export const stackList = [
         itemName: "Dialog",
       },
       {
-        href: "#",
+        href: "/progress",
         type: "item",
         itemName: "Progress",
       },
