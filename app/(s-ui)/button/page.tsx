@@ -7,6 +7,7 @@ import Link from "next/link";
 import { IoTrashBin, IoCloudUpload } from "react-icons/io5";
 import { GiEvilBook } from "react-icons/gi";
 import UploadButton from "./demo/upload-btn";
+import LoadingButton from "./demo/loading-btn";
 
 export default function SUIButton() {
   return (
@@ -222,8 +223,24 @@ export default function SUIButton() {
       </div>
 
       <Typography variant="h4" className={styles.subTitle}>
-        Loading ... [TODO]
+        Loading
       </Typography>
+      <Typography
+        variant="body1"
+        align="justify"
+        className={styles.description}
+      >
+        The loading prop is used to set buttons in a loading state and disable
+        interactions.
+      </Typography>
+      <div className={styles.demoContainer}>
+        <div className={styles.hasBtn}>
+          <LoadingButton />
+        </div>
+        <div className={styles.code}>
+          <DynamicSyntax type={"loading"} />
+        </div>
+      </div>
     </div>
   );
 }

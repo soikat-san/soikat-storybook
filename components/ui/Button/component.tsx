@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     ...otherProps
   } = props;
 
-  // Combine class names according to props
+  // Combine class names according to props.
   const classNames = [
     "custom-button",
     `variant-${variant}`,
@@ -31,37 +31,40 @@ const Button: React.FC<ButtonProps> = (props) => {
     fullWidth ? "full-width" : "",
     disabled ? "disabled" : "",
     disableElevation ? "no-elevation" : "",
-    classes.root || "", // Allow override from props
+    classes.root || "", // Allow override from props.
   ]
     .filter(Boolean)
     .join(" ");
 
   const isDisabled = disabled || Boolean(loading);
 
-  // Determine what to render as button content (icons / loading)
   let content;
-  if (loading) {
-    // We show loading indicator or children in different positions
-    if (loadingPosition === "start") {
-      content = (
-        <>
-          {loadingIndicator}
-          {children}
-        </>
-      );
-    } else if (loadingPosition === "end") {
-      content = (
-        <>
-          {children}
-          {loadingIndicator}
-        </>
-      );
-    } else {
-      // center
-      content = loadingIndicator ?? children;
-    }
-  } else {
-    // Not loading: show icons + children
+
+  // When loading and the indicator is centered, override the content entirely.
+  if (loading && loadingPosition === "center") {
+    content = loadingIndicator ?? children;
+  }
+  // When loading and position is either "start" or "end"
+  else if (
+    loading &&
+    (loadingPosition === "start" || loadingPosition === "end")
+  ) {
+    const renderStartIcon =
+      loading && loadingPosition === "start" ? loadingIndicator : startIcon;
+    const renderEndIcon =
+      loading && loadingPosition === "end" ? loadingIndicator : endIcon;
+    content = (
+      <>
+        {renderStartIcon && (
+          <span className="icon-start">{renderStartIcon}</span>
+        )}
+        {children}
+        {renderEndIcon && <span className="icon-end">{renderEndIcon}</span>}
+      </>
+    );
+  }
+  // Default rendering when not loading.
+  else {
     content = (
       <>
         {startIcon && <span className="icon-start">{startIcon}</span>}
@@ -71,7 +74,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     );
   }
 
-  // If `href` is provided, render an anchor element
+  // Render an anchor element if href is provided.
   if (href) {
     return (
       <a
@@ -85,7 +88,6 @@ const Button: React.FC<ButtonProps> = (props) => {
     );
   }
 
-  // Otherwise, render a regular (or custom) component
   return (
     <Component className={classNames} disabled={isDisabled} {...otherProps}>
       {content}

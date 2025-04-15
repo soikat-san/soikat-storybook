@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import { FC, ChangeEvent } from "react";
 import styles from "../page.module.css";
 import { IoCloudUpload } from "react-icons/io5";
 import Button from "@/components/ui/Button/component";
 
-const UploadButton: React.FC = () => {
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+const UploadButton: FC = () => {
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.files);
   };
 
