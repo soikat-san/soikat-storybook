@@ -1,0 +1,164 @@
+/* ------------------------------ */
+/* BASE STYLES FOR BUTTONGROUP   */
+/* ------------------------------ */
+
+/* ButtonGroup Container: Remove internal padding so borders extend fully */
+.custom-button-group {
+  display: inline-flex;
+  padding: 0; /* Remove container padding */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Each Button: Use internal padding for spacing */
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px; /* Adjust padding as desired */
+  margin: 0; /* Ensure no margin interferes */
+}
+
+/* ------------------------------ */
+/* HORIZONTAL ORIENTATION RULES  */
+/* ------------------------------ */
+
+/* Already-existing rules for horizontal orientation */
+.custom-button-group.orientation-horizontal {
+  flex-direction: row;
+}
+
+/* CONTTAINED variant (horizontal) */
+.custom-button-group.orientation-horizontal.variant-contained
+  .custom-button
+  + .custom-button {
+  border-left: 1px solid #fff; /* Divider color (adjust as needed) */
+}
+.custom-button-group.orientation-horizontal.variant-contained .custom-button {
+  border-radius: 0;
+}
+.custom-button-group.orientation-horizontal.variant-contained
+  .custom-button:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.custom-button-group.orientation-horizontal.variant-contained
+  .custom-button:last-of-type {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* TEXT variant (horizontal) */
+.custom-button-group.orientation-horizontal.variant-text .custom-button {
+  border: none;
+  border-radius: 0;
+}
+.custom-button-group.orientation-horizontal.variant-text
+  .custom-button
+  + .custom-button {
+  border-left: 1px solid currentColor;
+}
+.custom-button-group.orientation-horizontal.variant-text
+  .custom-button:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.custom-button-group.orientation-horizontal.variant-text
+  .custom-button:last-of-type {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* OUTLINED variant (horizontal) */
+.custom-button-group.orientation-horizontal.variant-outlined .custom-button {
+  border: 1px solid currentColor;
+  border-radius: 0;
+  margin: 0;
+}
+.custom-button-group.orientation-horizontal.variant-outlined
+  .custom-button
+  + .custom-button {
+  margin-left: -1px;
+}
+.custom-button-group.orientation-horizontal.variant-outlined
+  .custom-button:first-of-type {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.custom-button-group.orientation-horizontal.variant-outlined
+  .custom-button:last-of-type {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* ------------------------------ */
+/* VERTICAL ORIENTATION RULES    */
+/* ------------------------------ */
+
+/* Set flex direction to column for vertical orientation */
+.custom-button-group.orientation-vertical {
+  flex-direction: column;
+}
+
+/* CONTAINED variant (vertical) */
+.custom-button-group.orientation-vertical.variant-contained
+  .custom-button
+  + .custom-button {
+  border-top: 1px solid #fff; /* Use top border as divider */
+}
+.custom-button-group.orientation-vertical.variant-contained .custom-button {
+  border-radius: 0;
+}
+.custom-button-group.orientation-vertical.variant-contained
+  .custom-button:first-of-type {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.custom-button-group.orientation-vertical.variant-contained
+  .custom-button:last-of-type {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* TEXT variant (vertical) */
+.custom-button-group.orientation-vertical.variant-text .custom-button {
+  border: none;
+  border-radius: 0;
+}
+.custom-button-group.orientation-vertical.variant-text
+  .custom-button
+  + .custom-button {
+  border-top: 1px solid currentColor;
+}
+.custom-button-group.orientation-vertical.variant-text
+  .custom-button:first-of-type {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.custom-button-group.orientation-vertical.variant-text
+  .custom-button:last-of-type {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* OUTLINED variant (vertical) */
+.custom-button-group.orientation-vertical.variant-outlined .custom-button {
+  border: 1px solid currentColor;
+  border-radius: 0;
+  margin: 0;
+}
+.custom-button-group.orientation-vertical.variant-outlined
+  .custom-button
+  + .custom-button {
+  margin-top: -1px;
+}
+.custom-button-group.orientation-vertical.variant-outlined
+  .custom-button:first-of-type {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.custom-button-group.orientation-vertical.variant-outlined
+  .custom-button:last-of-type {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}

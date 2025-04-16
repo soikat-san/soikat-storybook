@@ -1,8 +1,13 @@
-import React from "react";
-import { ButtonProps } from "./props.interface";
+"use client";
 import "./styles.css";
+import React, { useContext } from "react";
+import { ButtonProps } from "./props.interface";
+import { ButtonGroupContext } from "../ButtonGroup/component";
 
 const Button: React.FC<ButtonProps> = (props) => {
+  // Access ButtonGroup context if the Button is rendered inside a ButtonGroup.
+  const group = useContext(ButtonGroupContext);
+
   const {
     children,
     classes = {},
@@ -18,9 +23,13 @@ const Button: React.FC<ButtonProps> = (props) => {
     loadingPosition = "center",
     size = "medium",
     startIcon,
-    variant = "text",
+    // Use explicit variant if provided; otherwise, fall back to the group variant.
+    variant: propsVariant,
     ...otherProps
   } = props;
+
+  const variant = propsVariant || group.variant || "text";
+  const isDisabled = disabled || Boolean(loading) || group.disabled;
 
   // Combine class names according to props.
   const classNames = [
@@ -29,14 +38,12 @@ const Button: React.FC<ButtonProps> = (props) => {
     `color-${color}`,
     `size-${size}`,
     fullWidth ? "full-width" : "",
-    disabled ? "disabled" : "",
+    isDisabled ? "disabled" : "",
     disableElevation ? "no-elevation" : "",
     classes.root || "", // Allow override from props.
   ]
     .filter(Boolean)
     .join(" ");
-
-  const isDisabled = disabled || Boolean(loading);
 
   let content;
 

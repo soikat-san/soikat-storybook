@@ -97,7 +97,7 @@
 /* Sizes */
 .size-small {
   padding: 4px 8px;
-  font-size: 0.875rem;
+  font-size: 0.675rem;
 }
 
 .size-medium {
@@ -107,7 +107,7 @@
 
 .size-large {
   padding: 12px 24px;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
 }
 
 /* Full width */
