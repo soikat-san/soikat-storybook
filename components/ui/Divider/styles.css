@@ -1,0 +1,126 @@
+/* ============================= */
+/* BASE DIVIDER STYLES          */
+/* ============================= */
+
+/* Base style for all dividers */
+.custom-divider {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/* ============================= */
+/* HORIZONTAL ORIENTATION       */
+/* ============================= */
+
+/* For horizontal divider, set height and full width */
+.custom-divider.orientation-horizontal {
+  height: 1px;
+  width: 100%;
+  margin: 8px 0;
+}
+
+/* Variant: fullWidth (default) */
+.custom-divider.orientation-horizontal.variant-fullWidth {
+  margin: 8px 0;
+}
+
+/* Variant: inset – add left margin to inset divider */
+.custom-divider.orientation-horizontal.variant-inset {
+  margin-left: 72px;
+  margin-right: 8px;
+}
+
+/* Variant: middle – shorter divider centered in container */
+.custom-divider.orientation-horizontal.variant-middle {
+  margin: 8px auto;
+  width: 80%;
+}
+
+/* ============================= */
+/* VERTICAL ORIENTATION         */
+/* ============================= */
+
+/* For vertical divider, set width and use full height (if not in flex, height can be set by parent) */
+.custom-divider.orientation-vertical {
+  width: 1px;
+  height: 100%;
+  margin: 0 8px;
+}
+
+/* Variant: inset (vertical) */
+.custom-divider.orientation-vertical.variant-inset {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* Variant: middle (vertical) */
+.custom-divider.orientation-vertical.variant-middle {
+  margin: 8px auto;
+}
+
+/* ============================= */
+/* ABSOLUTE POSITIONING         */
+/* ============================= */
+
+/* When absolute, make the divider positioned relative to its closest positioned parent */
+.custom-divider.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ============================= */
+/* FLEX ITEM ADJUSTMENT         */
+/* ============================= */
+
+/* When the divider is a flex item in vertical orientation, let it stretch */
+.custom-divider.flex-item.orientation-vertical {
+  align-self: stretch;
+}
+
+/* ============================= */
+/* DIVIDER WITH CHILDREN        */
+/* ============================= */
+
+/* When the divider has children, display as flex container for proper alignment */
+.custom-divider.with-children {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Create pseudo-elements for horizontal divider with children */
+.custom-divider.with-children:before,
+.custom-divider.with-children:after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* For vertical divider with children, use border-right for pseudo-elements */
+.custom-divider.orientation-vertical.with-children:before,
+.custom-divider.orientation-vertical.with-children:after {
+  border-bottom: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/* ============================= */
+/* TEXT ALIGNMENT FOR CHILDREN    */
+/* ============================= */
+
+/* Center alignment (default) */
+.divider-text-center {
+  padding: 0 16px;
+}
+
+/* Left alignment: extra space on right */
+.divider-text-left {
+  padding-right: 16px;
+}
+
+/* Right alignment: extra space on left */
+.divider-text-right {
+  padding-left: 16px;
+}

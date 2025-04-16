@@ -30,7 +30,8 @@ export const stackList = [
         itemName: "Chip",
       },
       {
-        href: "#",
+        // demo pending
+        href: "/divider",
         type: "item",
         itemName: "Divider",
       },
@@ -119,11 +120,6 @@ export const stackList = [
       {
         href: "#",
         type: "item",
-        itemName: "Floating Action Button",
-      },
-      {
-        href: "#",
-        type: "item",
         itemName: "Radio Group",
       },
       {
@@ -150,11 +146,6 @@ export const stackList = [
         href: "#",
         type: "item",
         itemName: "Text Field",
-      },
-      {
-        href: "#",
-        type: "item",
-        itemName: "Transfer List",
       },
       {
         href: "#",
@@ -255,7 +246,7 @@ export const stackList = [
         itemName: "App Bar",
       },
       // {
-      //   href: "/card", not to do
+      //   href: "#", not to do
       //   type: "item",
       //   itemName: "Card",
       // },
