@@ -1,0 +1,105 @@
+/* ===================================== */
+/*         IMAGE LIST CONTAINER         */
+/* ===================================== */
+.custom-image-list {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================================== */
+/*         IMAGE LIST ITEM              */
+/* ===================================== */
+.custom-image-list-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make sure images fill their container */
+.custom-image-list-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===================================== */
+/*      IMAGE LIST ITEM BAR (OVERLAY)   */
+/* ===================================== */
+.custom-image-list-item-bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 8px;
+  box-sizing: border-box;
+}
+
+/* Positions for the bar */
+.custom-image-list-item-bar.position-top {
+  top: 0;
+}
+.custom-image-list-item-bar.position-bottom {
+  bottom: 0;
+}
+.custom-image-list-item-bar.position-below {
+  position: relative;
+  background: none;
+  color: inherit;
+  padding: 4px 0;
+}
+
+/* Layout for the bar's inner content */
+.image-list-item-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.image-list-item-bar-content .text-content {
+  flex: 1;
+  padding: 0 8px;
+  text-align: left;
+}
+.image-list-item-bar-content .title {
+  display: block;
+  font-weight: bold;
+}
+.image-list-item-bar-content .subtitle {
+  display: block;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+.image-list-item-bar-content .action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================================== */
+/*   VARIANT-SPECIFIC STYLES (OPTIONAL)   */
+/* ===================================== */
+
+/* Masonry variant (example) */
+.custom-image-list.variant-masonry {
+  grid-auto-flow: dense;
+}
+
+/* ------------------------------------- */
+/* WOVEN VARIANT STYLES                 */
+/* ------------------------------------- */
+/* To achieve a woven look, alternate the vertical position of each item.
+   Adjust the translateY offset (here 5px) as desired for a rhythmic layout. */
+.custom-image-list.variant-woven .custom-image-list-item {
+  position: relative;
+  transform: none;
+}
+
+.custom-image-list.variant-woven .custom-image-list-item:nth-of-type(odd) {
+  transform: translateY(-5px);
+}
+
+.custom-image-list.variant-woven .custom-image-list-item:nth-of-type(even) {
+  transform: translateY(5px);
+}

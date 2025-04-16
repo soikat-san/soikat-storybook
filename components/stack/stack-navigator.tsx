@@ -36,7 +36,11 @@ export function StackNavigator() {
                     pathname === gI.href ? "item-stack-active" : "item-stack"
                   }
                 >
-                  <Typography>{gI.itemName}</Typography>
+                  <Typography
+                    className={gI.href.includes("/") ? "doneDemo" : ""}
+                  >
+                    {gI.itemName}
+                  </Typography>
                 </Link>
               ))}
             </Fragment>

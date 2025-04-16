@@ -90,3 +90,7 @@ html.dark .item-stack-active > p {
   background-color: #a5f3fc;
   border-left: 2px solid #06b6d4;
 }
+
+.doneDemo {
+  color: greenyellow !important;
+}

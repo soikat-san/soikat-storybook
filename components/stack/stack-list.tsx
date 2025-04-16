@@ -4,7 +4,7 @@ export const stackList = [
     rootName: "Components",
     items: [
       {
-        href: "/",
+        href: "#",
         type: "item",
         itemName: "All Components",
       },
@@ -30,8 +30,7 @@ export const stackList = [
         itemName: "Chip",
       },
       {
-        // demo pending
-        href: "/divider",
+        href: "#",
         type: "item",
         itemName: "Divider",
       },
@@ -159,27 +158,12 @@ export const stackList = [
     groupName: "Layout",
     items: [
       {
-        href: "#",
-        type: "item",
-        itemName: "Box",
-      },
-      {
-        href: "#",
-        type: "item",
-        itemName: "Container",
-      },
-      {
         href: "/grid",
         type: "item",
         itemName: "Grid",
       },
       {
-        href: "#",
-        type: "item",
-        itemName: "Stack",
-      },
-      {
-        href: "#",
+        href: "/imagelist",
         type: "item",
         itemName: "Image List",
       },
@@ -189,11 +173,6 @@ export const stackList = [
     type: "group",
     groupName: "Navigation",
     items: [
-      {
-        href: "#",
-        type: "item",
-        itemName: "Bottom Navigation",
-      },
       {
         href: "#",
         type: "item",
@@ -245,11 +224,6 @@ export const stackList = [
         type: "item",
         itemName: "App Bar",
       },
-      // {
-      //   href: "#", not to do
-      //   type: "item",
-      //   itemName: "Card",
-      // },
       {
         href: "/paper",
         type: "item",
