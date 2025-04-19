@@ -1,0 +1,105 @@
+/* Base table styles */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #000;
+  padding: 8px;
+}
+
+html.dark .custom-table th,
+html.dark .custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.sticky-header thead {
+  position: sticky;
+  top: 0;
+  background: #f5f5f5;
+  z-index: 1;
+}
+
+/* Padding modifiers */
+.padding-checkbox th,
+.padding-checkbox td {
+  padding: 4px;
+}
+.padding-none th,
+.padding-none td {
+  padding: 0;
+}
+.padding-normal th,
+.padding-normal td {
+  padding: 8px;
+}
+
+/* Size modifiers */
+.size-small th,
+.size-small td {
+  font-size: 0.75rem;
+}
+.size-medium th,
+.size-medium td {
+  font-size: 1rem;
+}
+
+/* Table Container */
+.custom-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Table Head, Body, Footer */
+.custom-table-head {
+}
+.custom-table-body {
+}
+.custom-table-footer {
+}
+
+/* Table Row */
+.custom-table-row.hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+.custom-table-row.selected {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Table Cell alignment */
+.custom-table-cell.align-center {
+  text-align: center;
+}
+.custom-table-cell.align-left {
+  text-align: left;
+}
+.custom-table-cell.align-right {
+  text-align: right;
+}
+.custom-table-cell.align-justify {
+  text-align: justify;
+}
+
+/* Table Pagination */
+.custom-table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+/* Table Sort Label */
+.custom-table-sort-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.custom-table-sort-label.active {
+  color: #1976d2;
+}
+.default-sort-icon {
+  margin-left: 4px;
+}

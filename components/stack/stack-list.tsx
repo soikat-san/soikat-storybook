@@ -40,7 +40,7 @@ export const stackList = [
         itemName: "List",
       },
       {
-        href: "#",
+        href: "/table",
         type: "item",
         itemName: "Table",
       },

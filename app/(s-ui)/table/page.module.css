@@ -1,0 +1,113 @@
+.tableContainer {
+  margin: 25px 0;
+}
+
+.title {
+  font-weight: 800;
+}
+
+:global(html.dark) .title {
+  color: #f8fafc;
+}
+
+.description {
+  padding: 5px 0;
+  font-weight: 500;
+  > span {
+    padding: 3px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #a16207;
+  }
+}
+
+:global(html.dark) .description {
+  color: #b6bec9;
+  > span {
+    padding: 3px;
+    color: #000;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #fef9c3;
+  }
+}
+
+.subTitle {
+  font-weight: 700;
+  padding: 30px 0 10px 0;
+}
+
+:global(html.dark) .subTitle {
+  color: #f8fafc;
+}
+
+.subSubTitle {
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+:global(html.dark) .subSubTitle {
+  color: #f8fafc;
+}
+
+.demoContainer {
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 0.1px solid #64748b;
+}
+
+.hasTable {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #cbd5e1;
+  border-radius: 10px 10px 0 0;
+  > div > svg {
+    font-size: 30px;
+    color: #171717;
+  }
+}
+
+:global(html.dark) .hasTable {
+  background-color: #020617;
+}
+
+.code pre {
+  margin: 0 !important;
+  padding: 1rem !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  border-radius: 0 0 10px 10px !important;
+}
+
+.dot {
+  top: 3px;
+  padding: 3px 0;
+  margin-left: 10px;
+  position: relative;
+}
+
+.content {
+  padding: 3px 0;
+  > span {
+    padding: 3px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #a16207;
+  }
+}
+
+:global(html.dark) .content {
+  color: #b6bec9;
+  font-size: 16px;
+  > span {
+    padding: 3px;
+    color: #000;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #fef9c3;
+  }
+}
