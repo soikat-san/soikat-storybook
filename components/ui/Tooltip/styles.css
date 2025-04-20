@@ -1,0 +1,181 @@
+/* Wrapper so we can position the popup absolutely */
+.tooltip-wrapper {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+/* Base tooltip box */
+.tooltip-box {
+  position: absolute;
+  z-index: 1000;
+  max-width: 200px;
+  padding: 6px 10px;
+  background: #333;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  white-space: nowrap;
+}
+
+/* Show on hover */
+.tooltip-box.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* -------- tooltip arrow (new triangle style) -------- */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  /* inherit background so the arrow color always matches the tooltip */
+}
+
+/* TOP  ── tooltip sits above the trigger, arrow points DOWN */
+.tooltip-box.placement-top .tooltip-arrow,
+.tooltip-box.placement-top-start .tooltip-arrow,
+.tooltip-box.placement-top-end .tooltip-arrow {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333; /* arrow colour */
+  top: 100%; /* stick to bottom edge of tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* BOTTOM ── tooltip below trigger, arrow points UP */
+.tooltip-box.placement-bottom .tooltip-arrow,
+.tooltip-box.placement-bottom-start .tooltip-arrow,
+.tooltip-box.placement-bottom-end .tooltip-arrow {
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #333;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* LEFT  ── tooltip left of trigger, arrow points RIGHT */
+.tooltip-box.placement-left .tooltip-arrow,
+.tooltip-box.placement-left-start .tooltip-arrow,
+.tooltip-box.placement-left-end .tooltip-arrow {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #333;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* RIGHT ── tooltip right of trigger, arrow points LEFT */
+.tooltip-box.placement-right .tooltip-arrow,
+.tooltip-box.placement-right-start .tooltip-arrow,
+.tooltip-box.placement-right-end .tooltip-arrow {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #333;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* -------- placement rules (valid CSS) -------- */
+
+/* TOP */
+.tooltip-box.placement-top {
+  /* centered */
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -4px);
+}
+.tooltip-box.placement-top .tooltip-arrow {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* TOP‑START  &  TOP‑END */
+.tooltip-box.placement-top-start {
+  bottom: 100%;
+  left: 0;
+  transform: translateY(-4px);
+}
+.tooltip-box.placement-top-end {
+  bottom: 100%;
+  right: 0;
+  left: auto;
+  transform: translateY(-4px);
+}
+
+/* BOTTOM */
+.tooltip-box.placement-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 4px);
+}
+.tooltip-box.placement-bottom .tooltip-arrow {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* BOTTOM‑START  &  BOTTOM‑END */
+.tooltip-box.placement-bottom-start {
+  top: 100%;
+  left: 0;
+  transform: translateY(4px);
+}
+.tooltip-box.placement-bottom-end {
+  top: 100%;
+  right: 0;
+  left: auto;
+  transform: translateY(4px);
+}
+
+/* LEFT */
+.tooltip-box.placement-left {
+  right: 100%;
+  top: 50%;
+  transform: translate(-4px, -50%);
+}
+.tooltip-box.placement-left .tooltip-arrow {
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip-box.placement-left-start {
+  right: 100%;
+  top: 0;
+  transform: translateX(-4px);
+}
+.tooltip-box.placement-left-end {
+  right: 100%;
+  bottom: 0;
+  transform: translateX(-4px);
+}
+
+/* RIGHT */
+.tooltip-box.placement-right {
+  left: 100%;
+  top: 50%;
+  transform: translate(4px, -50%);
+}
+.tooltip-box.placement-right .tooltip-arrow {
+  left: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.tooltip-box.placement-right-start {
+  left: 100%;
+  top: 0;
+  transform: translateX(4px);
+}
+.tooltip-box.placement-right-end {
+  left: 100%;
+  bottom: 0;
+  transform: translateX(4px);
+}
