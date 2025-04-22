@@ -30,16 +30,6 @@ export const stackList = [
         itemName: "Chip",
       },
       {
-        href: "#",
-        type: "item",
-        itemName: "Divider",
-      },
-      {
-        href: "#",
-        type: "item",
-        itemName: "List",
-      },
-      {
         href: "/table",
         type: "item",
         itemName: "Table",
@@ -61,7 +51,7 @@ export const stackList = [
     groupName: "Feedback",
     items: [
       {
-        href: "#",
+        href: "/alert",
         type: "item",
         itemName: "Alert",
       },

@@ -1,0 +1,109 @@
+/* Root container */
+.custom-alert-root {
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-family: sans-serif;
+  position: relative;
+}
+
+/* Icon */
+.custom-alert-icon {
+  margin-right: 12px;
+  display: flex;
+  line-height: 0;
+}
+
+/* Message area */
+.custom-alert-message {
+  flex: 1;
+  font-size: 0.875rem;
+}
+
+/* Action slot */
+.custom-alert-action {
+  margin-left: 16px;
+}
+
+/* Close button */
+.custom-alert-close-button {
+  background: none;
+  border: none;
+  margin-left: 8px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Title slot */
+.custom-alert-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* ─── Variants ─────────────────────────── */
+.custom-alert-standard {
+  background-color: #f5f5f5;
+}
+
+.custom-alert-filled {
+  color: #fff;
+}
+
+.custom-alert-outlined {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+/* ─── Severity / Color Combinations ────── */
+/* SUCCESS */
+.custom-alert-success.custom-alert-standard {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+.custom-alert-success.custom-alert-filled {
+  background-color: #2e7d32;
+}
+.custom-alert-success.custom-alert-outlined {
+  color: #2e7d32;
+}
+
+/* INFO */
+.custom-alert-info.custom-alert-standard {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+.custom-alert-info.custom-alert-filled {
+  background-color: #1565c0;
+}
+.custom-alert-info.custom-alert-outlined {
+  color: #1565c0;
+}
+
+/* WARNING */
+.custom-alert-warning.custom-alert-standard {
+  background-color: #fff8e1;
+  color: #ed6c02;
+}
+.custom-alert-warning.custom-alert-filled {
+  background-color: #ed6c02;
+}
+.custom-alert-warning.custom-alert-outlined {
+  color: #ed6c02;
+}
+
+/* ERROR */
+.custom-alert-error.custom-alert-standard {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+.custom-alert-error.custom-alert-filled {
+  background-color: #d32f2f;
+}
+.custom-alert-error.custom-alert-outlined {
+  color: #d32f2f;
+}
+
+/* If user passes a custom `color` prop, you can target it like:
+     .custom-alert-color-yourColor { background-color: yourColor; } */
